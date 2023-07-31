@@ -6,11 +6,11 @@ function validateForm(event) {
 
     if ((username === "nserror" && password === "portfolio") || (username === "" && password === "")) {      // ajouter un autre utilisateur
 
-        // Fermer la page actuelle
-        window.close();
-
         // Ouvrir une nouvelle page dans une nouvelle fenêtre ou un nouvel onglet
         window.open("portfolio/portfolio.html", "_blank");
+
+        // Fermer la page actuelle
+        window.close();
 
     } else {
         errorMessage.style.display = "block";
@@ -78,19 +78,3 @@ window.onload = function() {
     document.body.appendChild(css);
 };
 
-// Fonction de gestionnaire d'événement pour le clic du bouton de déconnexion
-function logout() {
-    // Remplacer l'URL de la page actuelle par l'URL de la nouvelle page
-    history.replaceState(null, '', 'index-login.html');
-
-    // Ouvrir une nouvelle page dans une nouvelle fenêtre ou un nouvel onglet
-    window.open('index-login.html', '_blank');
-
-    // Fermer la page actuelle
-    window.close();
-}
-
-
-// Ajouter un écouteur d'événements au bouton de déconnexion
-var logoutBtn = document.getElementById("logout-btn");
-logoutBtn.addEventListener("click", logout);
