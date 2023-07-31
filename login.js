@@ -6,11 +6,11 @@ function validateForm(event) {
 
     if ((username === "nserror" && password === "portfolio") || (username === "" && password === "")) {      // ajouter un autre utilisateur
 
-        // Ouvrir une nouvelle page dans une nouvelle fenêtre ou un nouvel onglet
-        window.open("portfolio/portfolio.html", "_blank");
-
         // Fermer la page actuelle
         window.close();
+
+        // Ouvrir une nouvelle page dans une nouvelle fenêtre ou un nouvel onglet
+        window.open("portfolio/portfolio.html", "_blank");
 
     } else {
         errorMessage.style.display = "block";
